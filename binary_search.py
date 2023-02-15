@@ -73,6 +73,7 @@ def count_repeats(xs, x):
     >>> count_repeats([3, 2, 1], 4)
     0
     '''
+    '''
     def low_ind1(xs, x):
         lo, hi = 0, len(xs)
         while lo < hi:
@@ -94,7 +95,8 @@ def count_repeats(xs, x):
         last = lo
 
     return low_ind1 - low_ind2
-        
+    '''
+
 
 def argmin(f, lo, hi, epsilon=1e-3):
     '''
