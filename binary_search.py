@@ -205,15 +205,20 @@ def find_boundaries(f):
     else:
         you're done; return lo,hi
     '''
+    lo = -1
+    hi = 1
+
     def find(lo, hi):
         mid = (lo + hi) / 2
         if f(lo) < f(mid):
-            return find(lo * 2, hi)
+            lo = lo * 2
+            return find(lo, hi)
         elif f(hi) < f(mid):
-            return find(lo, hi * 2)
+            hi = hi * 2
+            return find(lo, hi)
         else:
             return lo, hi
-    return find(-1, 1)
+    return find(lo, hi)
 
 
 def argmin_simple(f, epsilon=1e6):
