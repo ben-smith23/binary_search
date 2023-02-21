@@ -215,6 +215,7 @@ def find_boundaries(f):
             return lo, hi
     return find(-1, 1)
 
+
 def argmin_simple(f, epsilon=1e6):
     '''
     This function is like argmin, but it internally uses
