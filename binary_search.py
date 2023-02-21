@@ -210,7 +210,7 @@ def find_boundaries(f):
 
     def find(lo, hi):
         mid = (lo + hi) / 2
-        if f(lo) < f(mid):
+        if f(lo) > f(mid):
             lo = lo * 2
             return find(lo, hi)
         elif f(hi) < f(mid):
